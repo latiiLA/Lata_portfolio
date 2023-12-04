@@ -1,0 +1,24 @@
+.Socials_container {
+  background: rgb(38, 38, 38);
+  background: linear-gradient(
+    0deg,
+    rgb(38, 38, 38, 1) 0%,
+    rgb(42, 64, 83, 1) 100%
+  );
+  /* height: 100vh; */
+  color: white;
+}
+
+.single_col {
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.social_media_icons_white {
+  display: flex;
+  justify-content: space-evenly;
+}
+.social_media_icons_white a {
+  color: white;
+  font-size: 2rem;
+}

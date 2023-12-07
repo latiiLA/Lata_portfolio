@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@chakra-ui/react": "^1.6.12",
+    "@chakra-ui/react": "^2.8.2",
     "@emailjs/browser": "^3.11.0",
     "@emotion/core": "^10.1.1",
     "@emotion/react": "^11.11.1",

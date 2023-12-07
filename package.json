@@ -1,8 +1,8 @@
 {
   "name": "react_portfolio",
-  "homepage": "https://latiila.github.io/Lata_portfolio/",
+  "homepage": "https://latiila.github.io/Lata_portfolio",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@chakra-ui/react": "^2.8.2",
     "@emailjs/browser": "^3.11.0",

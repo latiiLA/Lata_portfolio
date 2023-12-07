@@ -2,8 +2,8 @@ import React from "react";
 // import image from "./download.jpg";
 import "./home_body.css";
 
-import { Avatar, Button } from "@material-ui/core";
-import { Box, Typography } from "@mui/material";
+// import { Avatar, Button } from "@material-ui/core";
+import { Box, Typography, Button } from "@mui/material";
 
 const Home_body = () => {
   return (

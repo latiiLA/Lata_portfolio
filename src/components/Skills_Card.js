@@ -1,26 +1,3 @@
-// import React from "react";
-// import "./card.css";
-
-// const Card = () => {
-//   return (
-//     <>
-//       <div className="card_container">
-//         <img
-//           className="card_image"
-//           src="beauty1.webp"
-//           alt="card representation"
-//         />
-
-//         <h2 className="car_title">EthioFreelance Website</h2>
-//         <p className="card_description">
-//           A website that connects Freelancers with Employers
-//         </p>
-//       </div>
-//     </>
-//   );
-// };
-
-// export default Card;
 import React from "react";
 import Data from "../Data.json";
 import { Container } from "@mui/material";

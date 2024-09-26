@@ -1,9 +1,5 @@
 import React from "react";
-import "./socials.css";
-
-import { Container } from "react-bootstrap";
-
-// Font awesome imports
+import { Box, Typography, IconButton } from "@mui/material";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faLinkedin,
@@ -13,38 +9,91 @@ import {
   faGithub,
   faTelegram,
 } from "@fortawesome/free-brands-svg-icons";
-import { Typography } from "@mui/material";
 
 const Socials = () => {
   return (
-    <div className="Socials_container">
-      <Container>
-        <div className="single_col social_media_icons_white">
-          <a href="https://www.linkedin.com/in/latiila/">
-            <FontAwesomeIcon icon={faLinkedin} />
-          </a>
-          <a href="https://t.me/latiila/">
-            <FontAwesomeIcon icon={faTelegram} />
-          </a>
-          <a href="https://github.com/latiiLA">
-            <FontAwesomeIcon icon={faGithub} />
-          </a>
-          <a href="https://instagram.com">
-            <FontAwesomeIcon icon={faInstagram} />
-          </a>
-          <a href="https://twitter.com/latiilab/">
-            <FontAwesomeIcon icon={faTwitter} />
-          </a>
-          <a href="https://Youtube.com">
-            <FontAwesomeIcon icon={faYoutube} />
-          </a>
-        </div>
-        <Typography sx={{ display: "flex", justifyContent: "center" }}>
-          {" "}
-          &copy; 2023 Lata, All rights reserved.
-        </Typography>
-      </Container>
-    </div>
+    <Box
+      sx={{
+        backgroundColor: "#f8f9fa", // Changed to a lighter background
+        padding: "1rem 0", // Reduced padding
+        textAlign: "center",
+      }}
+    >
+      <Typography
+        variant="h6"
+        sx={{
+          color: "#333", // Changed text color for better visibility
+          marginBottom: "1rem", // Reduced margin
+        }}
+      >
+        Connect with Me
+      </Typography>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          gap: "1rem", // Reduced gap between icons
+        }}
+      >
+        <IconButton
+          component="a"
+          href="https://www.linkedin.com/in/latiila/"
+          aria-label="LinkedIn"
+          sx={{ color: "#333", "&:hover": { color: "#0077b5" } }} // Changed hover color for better visibility
+        >
+          <FontAwesomeIcon icon={faLinkedin} fontSize="1.5rem" />
+        </IconButton>
+        <IconButton
+          component="a"
+          href="https://t.me/latiila/"
+          aria-label="Telegram"
+          sx={{ color: "#333", "&:hover": { color: "#0088cc" } }}
+        >
+          <FontAwesomeIcon icon={faTelegram} fontSize="1.5rem" />
+        </IconButton>
+        <IconButton
+          component="a"
+          href="https://github.com/latiiLA"
+          aria-label="GitHub"
+          sx={{ color: "#333", "&:hover": { color: "#333" } }}
+        >
+          <FontAwesomeIcon icon={faGithub} fontSize="1.5rem" />
+        </IconButton>
+        <IconButton
+          component="a"
+          href="https://instagram.com"
+          aria-label="Instagram"
+          sx={{ color: "#333", "&:hover": { color: "#e1306c" } }}
+        >
+          <FontAwesomeIcon icon={faInstagram} fontSize="1.5rem" />
+        </IconButton>
+        <IconButton
+          component="a"
+          href="https://twitter.com/latiilab/"
+          aria-label="Twitter"
+          sx={{ color: "#333", "&:hover": { color: "#1da1f2" } }}
+        >
+          <FontAwesomeIcon icon={faTwitter} fontSize="1.5rem" />
+        </IconButton>
+        <IconButton
+          component="a"
+          href="https://Youtube.com"
+          aria-label="YouTube"
+          sx={{ color: "#333", "&:hover": { color: "#ff0000" } }}
+        >
+          <FontAwesomeIcon icon={faYoutube} fontSize="1.5rem" />
+        </IconButton>
+      </Box>
+      <Typography
+        sx={{
+          color: "#333",
+          marginTop: "1rem",
+          fontSize: "0.8rem", // Reduced font size
+        }}
+      >
+        &copy; 2023 Lata, All rights reserved.
+      </Typography>
+    </Box>
   );
 };
 

@@ -12,7 +12,7 @@ import Skills from "../../pages/Skills";
 
 const Home = () => {
   return (
-    <Box className="home-container">
+    <Box id="home" className="home-container">
       {/* <Header /> */}
       <Header />
       <Home_body />

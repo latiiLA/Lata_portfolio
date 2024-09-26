@@ -1,58 +1,85 @@
-// import React from "react";
-// import "./card.css";
-
-// const Card = () => {
-//   return (
-//     <>
-//       <div className="card_container">
-//         <img
-//           className="card_image"
-//           src="beauty1.webp"
-//           alt="card representation"
-//         />
-
-//         <h2 className="car_title">EthioFreelance Website</h2>
-//         <p className="card_description">
-//           A website that connects Freelancers with Employers
-//         </p>
-//       </div>
-//     </>
-//   );
-// };
-
-// export default Card;
 import React from "react";
 import Data from "../Data.json";
-import { Container } from "@mui/material";
+import {
+  Container,
+  Grid,
+  Card,
+  CardActionArea,
+  CardContent,
+  CardMedia,
+  Typography,
+  Box,
+} from "@mui/material";
 
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Typography from "@mui/material/Typography";
-import { CardActionArea } from "@mui/material";
-import { Grid } from "@mui/material";
+// Placeholder image import
+import card_image from "../assets/beauty1.webp";
+
+// Dynamically import images
+const getImage = (imageName) => {
+  try {
+    return require(`../assets/${imageName}`);
+  } catch (err) {
+    return card_image; // Fallback to placeholder if image is not found
+  }
+};
 
 const Project_Card = () => {
   return (
-    <Container maxWidth="lg" style={{ marginTop: "50px" }}>
-      <Grid container spacing={5} style={{ marginTop: "20px" }}>
-        {Data.map((result, index) => (
-          <Grid item xs={12} md={4} sm={4} key={index}>
-            <Card sx={{ maxWidth: 345 }}>
+    <Container sx={{ marginTop: "10px" }} maxWidth="false">
+      <Grid
+        container
+        spacing={5}
+        sx={{ display: "flex", justifyContent: "space-between" }}
+      >
+        {Data.map((project, index) => (
+          <Grid item xs={12} sm={6} md={6} key={index}>
+            <Card
+              sx={{
+                borderRadius: "15px",
+                boxShadow: "0 4px 15px rgba(0, 0, 0, 0.15)", // Softer shadow
+                transition: "transform 0.3s ease-in-out",
+                "&:hover": {
+                  transform: "scale(1.05)",
+                },
+              }}
+            >
               <CardActionArea>
                 <CardMedia
                   component="img"
-                  height="140"
-                  image={result.img}
-                  alt="green iguana"
+                  height="300"
+                  image={getImage(project.image)} // Use the dynamic image loading function
+                  alt={project.title}
+                  sx={{ borderRadius: "15px 15px 0 0" }}
                 />
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="div">
-                    {result.title}
+                <CardContent sx={{ padding: "15px" }}>
+                  <Typography
+                    gutterBottom
+                    variant="h6"
+                    component="div"
+                    sx={{
+                      fontWeight: "bold",
+                      color: "#0693e3", // Customize color as needed
+                    }}
+                  >
+                    {project.title}
                   </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    {result.description}
+                  <Typography
+                    variant="body2"
+                    color="text.secondary"
+                    sx={{ marginBottom: "5px", minHeight: "50px" }} // Reduced minHeight
+                  >
+                    {project.description}
                   </Typography>
+                  <Box
+                    sx={{ display: "flex", justifyContent: "space-between" }}
+                  >
+                    <Typography variant="caption" color="text.secondary">
+                      {project.techStack}
+                    </Typography>
+                    <Typography variant="caption" color="primary">
+                      {project.status}
+                    </Typography>
+                  </Box>
                 </CardContent>
               </CardActionArea>
             </Card>

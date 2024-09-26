@@ -21,6 +21,7 @@ import Card from "./components/Project_Card";
 import About from "./components/About";
 import EduTimeline from "./components/EduTimeline";
 import Skills from "./pages/Skills";
+import Services from "./pages/Services";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -39,6 +40,7 @@ root.render(
         <Route path="/about" element={<About />} />
         <Route path="/timeline" element={<EduTimeline />} />
         <Route path="/skills" element={<Skills />} />
+        <Route path="/services" element={<Services />} />
       </Routes>
     </Router>
   </React.StrictMode>

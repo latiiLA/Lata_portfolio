@@ -1,44 +1,34 @@
 [
   {
     "id": 1,
-    "title": "EthioFreelance",
-    "description": "Ethiofreelance website is developed to connect freelancers and employers.",
-    "img": "beauty1.webp"
+    "title": "Coop TMS",
+    "image": "terminals_tms.png",
+    "description": "Terminal Management System for digital products such as ATM, POS and other related products. The project has simplified work and reduced errors by 95%."
+  },
+  {
+    "id": 2,
+    "title": "Coop File Sharings",
+    "image": "coop_filesharing_dashboard.png",
+    "description": "Coop file sharing is a system designed to share files such as memo, guidelines, important informations to employees of coopbank enhancing collaborations."
   },
   {
     "id": 1,
     "title": "lorem ipsum dolor",
-    "description": "sit amet consectetur adipisis elit. Laboriosam dignissiomos accuantium amet similique velit ",
-    "img": "beauty1.webp"
+    "description": "sit amet consectetur adipisis elit. Laboriosam dignissiomos accuantium amet similique velit "
   },
   {
     "id": 1,
     "title": "lorem ipsum dolor",
-    "description": "sit amet consectetur adipisis elit. Laboriosam dignissiomos accuantium amet similique velit ",
-    "img": "beauty1.webp"
+    "description": "sit amet consectetur adipisis elit. Laboriosam dignissiomos accuantium amet similique velit "
   },
   {
     "id": 1,
     "title": "lorem ipsum dolor",
-    "description": "sit amet consectetur adipisis elit. Laboriosam dignissiomos accuantium amet similique velit ",
-    "img": "beauty1.webp"
+    "description": "sit amet consectetur adipisis elit. Laboriosam dignissiomos accuantium amet similique velit "
   },
   {
     "id": 1,
     "title": "lorem ipsum dolor",
-    "description": "sit amet consectetur adipisis elit. Laboriosam dignissiomos accuantium amet similique velit ",
-    "img": "beauty1.webp"
-  },
-  {
-    "id": 1,
-    "title": "lorem ipsum dolor",
-    "description": "sit amet consectetur adipisis elit. Laboriosam dignissiomos accuantium amet similique velit ",
-    "img": "beauty1.webp"
-  },
-  {
-    "id": 1,
-    "title": "lorem ipsum dolor",
-    "description": "sit amet consectetur adipisis elit. Laboriosam dignissiomos accuantium amet similique velit ",
-    "img": "beauty1.webp"
+    "description": "sit amet consectetur adipisis elit. Laboriosam dignissiomos accuantium amet similique velit "
   }
 ]

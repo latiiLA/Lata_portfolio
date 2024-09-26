@@ -1,98 +1,136 @@
 import React from "react";
-// import image from "./download.jpg";
 import "./home_body.css";
-
-// import { Avatar, Button } from "@material-ui/core";
-import { Box, Typography, Button } from "@mui/material";
+import { Box, Typography, Button, Divider } from "@mui/material";
+import { LA } from "../assets/img";
 
 const Home_body = () => {
+  // Function to handle scrolling
+  const handleScroll = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
-    <Box fluid>
-      {/* bgcolor="#01579b" */}
-      <Box container backgroundcolor="primary" fluid>
+    <Box>
+      <Box
+        sx={{
+          backgroundColor: "#F0F4F8",
+          padding: { xs: "4rem 0", md: "7rem 0" },
+        }}
+      >
         <Box
           sx={{
-            display: "flex",
+            display: { xs: "block", md: "flex" }, // Stacks vertically on small screens
             justifyContent: "space-between",
-            alignContent: "center",
-            margin: "4rem 13.5rem",
-            // marginLeft:{}
-            padding: "10rem 0rem",
+            padding: { xs: "2rem", md: "5rem" }, // Responsive padding
+            margin: { xs: "0 2rem", md: "0 8rem" }, // Responsive margin
           }}
         >
-          <Box className="home_left">
+          <Box sx={{ flex: 1 }}>
             <Typography
               sx={{
-                fontSize: "5rem",
-                fontFamily: "Poppins",
+                fontSize: { xs: "2rem", md: "3rem" }, // Responsive font size
                 fontWeight: "bold",
-                // color: "white",
-                marginTop: "10%",
+                fontFamily: "Poppins, sans-serif",
+                color: "text.primary",
               }}
             >
               Hi, I'm Lata Amenu
             </Typography>
+
             <Typography
-              // className="home_developer"
               sx={{
-                fontSize: "3rem",
-                fontFamily: "san serif",
+                fontSize: { xs: "2rem", md: "3rem" }, // Responsive font size
                 fontWeight: "bold",
-                // color: "white",
-                marginTop: "0%",
+                fontFamily: "sans-serif",
+                color: "text.secondary",
+                marginTop: "1rem",
               }}
             >
               Front-End Developer
             </Typography>
+
             <Typography
               sx={{
-                fontSize: "1.3rem",
-                fontFamily: "san serif",
-                fontWeight: "bold",
-                // color: "white",
+                fontSize: { xs: "1rem", md: "1.2rem" }, // Responsive font size
+                marginTop: "1.5rem",
+                fontWeight: "400",
+                lineHeight: "1.6",
+                color: "text.primary",
+                maxWidth: "600px",
               }}
             >
-              I am a Front-end website developer with the knowledge of React JS,
-              I have Back-end development knowledge with Express JS, Node JS and
-              Database knowledges such as Mongo DB and SQL.{" "}
+              I am a Front-end website developer with a deep knowledge of React
+              JS. I also possess back-end development skills with Express JS,
+              Node JS, and databases such as MongoDB and SQL.
             </Typography>
-            <div className="home_btns">
+
+            {/* Buttons Section */}
+            <Box
+              sx={{
+                marginTop: "2rem",
+                display: "flex",
+                flexDirection: { xs: "column", md: "row" },
+                gap: "1rem",
+              }}
+            >
               <Button
                 color="primary"
                 variant="contained"
-                style={{
+                sx={{
                   borderRadius: "0.5rem",
-                  // backgroundcolor: "primary",
-                  // padding: "18px 36px",
-                  margin: "10px",
+                  padding: "1rem 2rem",
                   fontWeight: "bold",
-                  padding: "1rem 1rem",
+                  fontSize: { xs: "0.9rem", md: "1rem" }, // Responsive font size
                 }}
+                onClick={() => handleScroll("contact")}
               >
                 HIRE ME
               </Button>
               <Button
-                color="primary"
+                color="secondary"
                 variant="contained"
-                style={{
+                sx={{
                   borderRadius: "0.5rem",
-                  // backgroundcolor: "primary",
-                  // padding: "18px 36px",
-                  margin: "10px",
+                  padding: "1rem 2rem",
                   fontWeight: "bold",
-                  padding: "1rem",
+                  fontSize: { xs: "0.9rem", md: "1rem" }, // Responsive font size
                 }}
               >
                 DOWNLOAD RESUME
               </Button>
-            </div>
+            </Box>
           </Box>
 
-          <Box>
-            <img className="home_right" src="LA.jpg" alt="lata's portfolio" />
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              marginTop: { xs: "2rem", md: "0" },
+            }}
+          >
+            <img
+              width="100%" // Make image responsive
+              height="auto" // Maintain aspect ratio
+              style={{ maxWidth: "425px", height: "auto" }} // Limit max width
+              className="home_right"
+              src={LA}
+              alt="lata's portfolio"
+            />
           </Box>
         </Box>
       </Box>
+      <Divider
+        sx={{
+          background:
+            "linear-gradient(90deg, rgba(0,147,233,1) 0%, rgba(255,0,150,1) 100%)", // Gradient background
+          height: 4,
+          borderRadius: "4px",
+          boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.2)",
+          margin: "20px 0",
+        }}
+      />
     </Box>
   );
 };

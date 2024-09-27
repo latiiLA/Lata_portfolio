@@ -7,14 +7,15 @@
   },
   {
     "id": 2,
-    "title": "Coop File Sharings",
+    "title": "Coop File Sharing",
     "image": "coop_filesharing_dashboard.png",
     "description": "Coop file sharing is a system designed to share files such as memo, guidelines, important informations to employees of coopbank enhancing collaborations."
   },
   {
     "id": 1,
-    "title": "lorem ipsum dolor",
-    "description": "sit amet consectetur adipisis elit. Laboriosam dignissiomos accuantium amet similique velit "
+    "title": "Freelancing Website",
+    "image": "freelance_home_page.png",
+    "description": "Freelance website named Ethiofreelance was built for the purpose of linking freelancers with employers. This project is my Final Capstone project I have worked on for my Bsc. degree."
   },
   {
     "id": 1,
